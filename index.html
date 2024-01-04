@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="CSS/landing.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        frameset {
+            border: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        frame {
+            border: none;
+        }
+
+        @media (max-width: 273px) {
+            .frame-utama {
+                cols: 40%, *;
+            }
+
+            frame[name="navigasi"] {
+                rows: 20%,*,5%;
+            }
+            frame[name="content"]{
+                color: #fff;
+                cols: 5%, 20%, *;
+                rows: 5%, 90%, 5%;
+            }
+           
+           
+        }
+    </style>
+</head>
+<frameset cols="20%,*" border="0" cellspacing="0" class="frame-utama">
+    <frameset rows="30%,*,5%" border="0">
+        <frame name="profile" src="right-frame/profile.html" scrolling="no">
+        <frame name="navigasi" src="right-frame/navigasi.html">
+        <frame name="social" src="right-frame/social.html" scrolling="no">
+    </frameset>
+
+    <frame name="content" src="content.html/content.html">
+</frameset>
+</html>
